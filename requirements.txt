@@ -1,0 +1,16 @@
+aliyun-python-sdk-bssopenapi==1.0.6
+aliyun-python-sdk-cdn==3.0.2
+aliyun-python-sdk-cloudapi==4.5.1
+aliyun-python-sdk-core==2.11.5
+aliyun-python-sdk-cr==3.0.0
+aliyun-python-sdk-cs==2.9.0
+aliyun-python-sdk-ecs==4.13.1
+aliyun-python-sdk-edas==2.16.1
+aliyun-python-sdk-faas==1.0.0
+aliyun-python-sdk-green==3.4.0
+aliyun-python-sdk-ram==3.0.0
+aliyun-python-sdk-rds==2.1.9
+aliyun-python-sdk-ros==2.2.7
+aliyun-python-sdk-slb==3.2.7
+aliyun-python-sdk-sts==3.0.0
+aliyun-python-sdk-vpc==3.0.2
