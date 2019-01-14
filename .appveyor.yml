@@ -34,3 +34,4 @@ build: off
 
 test_script:
   - "coverage run --branch -m pytest aliyun-python-sdk-core/tests/"
+  - "%PYTHON%\\python.exe -m pytest python-sdk-functional-test/run_all_test.py"
