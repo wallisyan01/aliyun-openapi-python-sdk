@@ -17,7 +17,6 @@ environment:
 
 skip_commits:
   files:
-    - "*.yml"
     - "*.rst"
     - "LICENSE"
 
