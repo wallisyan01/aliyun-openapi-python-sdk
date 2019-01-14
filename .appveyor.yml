@@ -20,7 +20,7 @@ skip_commits:
     - "LICENSE"
 
 install:
-  - set PATH=%PYTHON%\\python.exe
+  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - "%PYTHON%\\python.exe -m pip install unittest2"
   - "%PYTHON%\\python.exe -m pip install coverage"
   - "%PYTHON%\\python.exe -m pip install pycodestyle"
