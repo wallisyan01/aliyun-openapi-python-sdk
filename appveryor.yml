@@ -28,4 +28,4 @@ install:
 build: off
 
 test_script:
-  - "%PYTHON%\\python.exe -m pytest"
+  - "%PYTHON%\\python.exe coverage run --branch -m pytest aliyun-python-sdk-core/tests/"
