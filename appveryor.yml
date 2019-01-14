@@ -1,7 +1,14 @@
 environment:
   matrix:
     - PYTHON: "C:\\Python27"
+    - PYTHON: "C:\\Python33"
+    - PYTHON: "C:\\Python34"
+    - PYTHON: "C:\\Python35"
     - PYTHON: "C:\\Python27-x64"
+    - PYTHON: "C:\\Python33-x64"
+      DISTUTILS_USE_SDK: "1"
+    - PYTHON: "C:\\Python34-x64"
+      DISTUTILS_USE_SDK: "1"
     - PYTHON: "C:\\Python35-x64"
     - PYTHON: "C:\\Python36-x64"
 
@@ -12,11 +19,11 @@ skip_commits:
     - "LICENSE"
 
 install:
-  - pip install unittest2
-  - pip install coverage
-  - pip install pycodestyle
-  - pip install mock
-  - pip install jmespath
+  - "%PYTHON%\\python.exe -m pip install unittest2"
+  - "%PYTHON%\\python.exe -m pip install coverage"
+  - "%PYTHON%\\python.exe -m pip install pycodestyle"
+  - "%PYTHON%\\python.exe -m pip install mock"
+  - "%PYTHON%\\python.exe -m pip install jmespath"
 
 build: off
 
@@ -24,7 +31,4 @@ test_script:
   - "%PYTHON%\\python.exe -m pytest"
 
 notifications:
-  - provider: Email
-    to:
-      - yanqd0@outlook.com
-    on_build_status_changed: true
+  email: false
