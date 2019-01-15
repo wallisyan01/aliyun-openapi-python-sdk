@@ -16,7 +16,6 @@ import os.path
 import json
 import sys
 import os
-import test_all
 
 
 import sys
