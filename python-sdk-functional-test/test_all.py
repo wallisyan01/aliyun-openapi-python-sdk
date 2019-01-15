@@ -1,5 +1,6 @@
 import os
-print('enter test')
+import sys
+print(sys.path)
 cur_path = os.path.abspath('..')
 python_path = ''
 for ret in os.walk(cur_path):
