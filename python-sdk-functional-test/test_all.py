@@ -1,5 +1,5 @@
 import os
-print('进入')
+print('enter test')
 cur_path = os.path.abspath('..')
 python_path = ''
 for ret in os.walk(cur_path):
