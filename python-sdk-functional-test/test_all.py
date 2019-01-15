@@ -1,4 +1,5 @@
 import os
+print('进入')
 cur_path = os.path.abspath('..')
 python_path = ''
 for ret in os.walk(cur_path):
@@ -8,3 +9,4 @@ for ret in os.walk(cur_path):
         python_path += root_path + ';'
 os.environ.update({"PYTHONPATH":python_path})
 path = os.environ.get('PYTHONPATH')
+print(path)
