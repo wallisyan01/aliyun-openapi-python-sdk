@@ -10,3 +10,4 @@ for ret in os.walk(cur_path):
         sys.path.insert(1,root_path)
         python_path += root_path + ';'
 os.environ.update({"PYTHONPATH":python_path})
+print(sys.path)
