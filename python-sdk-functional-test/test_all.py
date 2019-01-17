@@ -8,3 +8,6 @@ for ret in os.walk(cur_path):
     if root_path_list[-1].startswith('aliyunsdk'):
         sys.path.insert(1,root_path)
 print(sys.path)
+import subprocess
+ret = subprocess.call("coverage run --branch -m pytest python-sdk-functional-test/")
+print(ret)
