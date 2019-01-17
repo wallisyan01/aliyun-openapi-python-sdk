@@ -24,12 +24,12 @@ skip_commits:
 init:
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - cmd:
-	  @echo off
-	  SET PYTHONPATH = %PYTHONPATH%
-	  for /r %i in ('aliyun-python-sdk*') do (
-		  SET PYTHONPATH=%PYTHONPATH%;%i
-	  )
-	  pause
+      @echo off
+      SET PYTHONPATH = %PYTHONPATH%
+      for /r %i in ('aliyun-python-sdk*') do (
+	SET PYTHONPATH=%PYTHONPATH%;%i
+      )
+      pause
 
 install:
   - "%PYTHON%\\python.exe -m pip install unittest2"
