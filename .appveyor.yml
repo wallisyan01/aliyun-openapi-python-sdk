@@ -21,12 +21,10 @@ skip_commits:
     - "*.rst"
     - "LICENSE"
 
-before_install:
-  - ECHO "BEFORE INSTALL"
+install:
+  - ECHO "INSTALL"
   - "SET PYTHONPATH=''"
   - for /r %i in ('aliyun-python-sdk*') do ( SET PYTHONPATH=%PYTHONPATH%;%i )
-
-install:
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - "%PYTHON%\\python.exe -m pip install unittest2"
   - "%PYTHON%\\python.exe -m pip install coverage"
