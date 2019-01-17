@@ -20,9 +20,18 @@ skip_commits:
     - "*.yml"
     - "*.rst"
     - "LICENSE"
+    
+init:
+  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
+  - cmd:
+	  @echo off
+	  SET PYTHONPATH = %PYTHONPATH%
+	  for /r %i in ('aliyun-python-sdk*') do (
+		  SET PYTHONPATH=%PYTHONPATH%;%i
+	  )
+	  pause
 
 install:
-  - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - "%PYTHON%\\python.exe -m pip install unittest2"
   - "%PYTHON%\\python.exe -m pip install coverage"
   - "%PYTHON%\\python.exe -m pip install pycodestyle"
