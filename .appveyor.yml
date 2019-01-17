@@ -22,6 +22,7 @@ skip_commits:
     - "LICENSE"
 
 before_install:
+  - ECHO "BEFORE INSTALL"
   - "SET PYTHONPATH=''"
   - for /r %i in ('aliyun-python-sdk*') do ( SET PYTHONPATH=%PYTHONPATH%;%i )
 
