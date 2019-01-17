@@ -23,7 +23,7 @@ skip_commits:
     
 init:
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
-  - cmd:
+  - cmd:  >-
       @echo off
       SET PYTHONPATH = %PYTHONPATH%
       for /r %i in ('aliyun-python-sdk*') do (SET PYTHONPATH=%PYTHONPATH%;%i)
