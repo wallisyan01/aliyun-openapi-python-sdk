@@ -31,7 +31,7 @@ install:
   - "%PYTHON%\\python.exe -m pip install pytest"
   
 build_script:
-  - .\run_all_win.bat
+  - .\run_all_win.cmd
 
 build: off
 
