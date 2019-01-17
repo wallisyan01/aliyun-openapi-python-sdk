@@ -34,7 +34,5 @@ build: off
 
 test_script:
   - "coverage run --branch -m pytest aliyun-python-sdk-core/tests/"
-  - ECHO "INSTALL"
-  - "SET PYTHONPATH=''"
-  - "for /r %i in ('aliyun-python-sdk*') do ( SET PYTHONPATH=%PYTHONPATH%;%i)"
+  - "%PYTHON%\\python.exe python-sdk-functional-test/test_all.py"
   - "coverage run --branch -m pytest python-sdk-functional-test/"
