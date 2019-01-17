@@ -21,6 +21,10 @@ skip_commits:
     - "*.rst"
     - "LICENSE"
 
+before_install:
+  - "SET PYTHONPATH=''"
+  - for /r %i in ('aliyun-python-sdk*') do ( SET PYTHONPATH=%PYTHONPATH%;%i )
+
 install:
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - "%PYTHON%\\python.exe -m pip install unittest2"
@@ -29,7 +33,6 @@ install:
   - "%PYTHON%\\python.exe -m pip install mock"
   - "%PYTHON%\\python.exe -m pip install jmespath"
   - "%PYTHON%\\python.exe -m pip install pytest"
-  - for /r %i in ('aliyun-python-sdk*') do ( SET PYTHONPATH=%PYTHONPATH%;%i )
 
 build: off
 
