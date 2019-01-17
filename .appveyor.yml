@@ -30,8 +30,8 @@ install:
   - "%PYTHON%\\python.exe -m pip install jmespath"
   - "%PYTHON%\\python.exe -m pip install pytest"
   
-before_test:
-  - .\run_all_win.cmd
+build_script:
+  - .\run_all_win.bat
 
 build: off
 
