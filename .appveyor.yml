@@ -22,9 +22,6 @@ skip_commits:
     - "LICENSE"
 
 install:
-  - ECHO "INSTALL"
-  - "SET PYTHONPATH=''"
-  - "for /r %i in ('aliyun-python-sdk*') do ( SET PYTHONPATH=%PYTHONPATH%;%i)"
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   - "%PYTHON%\\python.exe -m pip install unittest2"
   - "%PYTHON%\\python.exe -m pip install coverage"
@@ -37,4 +34,7 @@ build: off
 
 test_script:
   - "coverage run --branch -m pytest aliyun-python-sdk-core/tests/"
+  - ECHO "INSTALL"
+  - "SET PYTHONPATH=''"
+  - "for /r %i in ('aliyun-python-sdk*') do ( SET PYTHONPATH=%PYTHONPATH%;%i)"
   - "coverage run --branch -m pytest python-sdk-functional-test/"
