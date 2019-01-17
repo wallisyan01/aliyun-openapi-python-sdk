@@ -29,8 +29,7 @@ install:
   - "%PYTHON%\\python.exe -m pip install mock"
   - "%PYTHON%\\python.exe -m pip install jmespath"
   - "%PYTHON%\\python.exe -m pip install pytest"
-  - cmd:
-    for /r %i in ('aliyun-python-sdk*') do ( SET PYTHONPATH=%PYTHONPATH%;%i )
+  - for /r %i in ('aliyun-python-sdk*') do ( SET PYTHONPATH=%PYTHONPATH%;%i )
 
 build: off
 
