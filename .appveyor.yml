@@ -29,7 +29,7 @@ install:
   - "%PYTHON%\\python.exe -m pip install mock"
   - "%PYTHON%\\python.exe -m pip install jmespath"
   - "%PYTHON%\\python.exe -m pip install pytest"
-  - ./build.cmd
+  - cmd: call ./build.cmd
 
 build: off
 
